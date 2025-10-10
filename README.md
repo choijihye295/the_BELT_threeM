@@ -59,3 +59,7 @@
 ## 시연 영상
 
 [![큰사람 프로젝트 관리 앱 시연 영상](https://img.youtube.com/vi/vSI0iYXrkOI/maxresdefault.jpg)](https://youtube.com/shorts/vSI0iYXrkOI)
+
+-----
+**참고사항**
+코드는 .apk 파일을 디컴파일한 코드입니다.
