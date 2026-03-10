@@ -1,0 +1,14 @@
+myvenv/
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+db.sqlite3
+db.sqlite3-journal
+.env
+.venv
+env/
+venv/
+ENV/
+staticfiles/
+.DS_Store

@@ -1,0 +1,43 @@
+{
+    "name": "my-django-app",
+    "image": "your-django-image:latest",
+    "env": {
+      "DJANGO_SECRET_KEY": {
+        "secret": "django_secret_key"
+      },
+      "DEBUG": "False",
+      "ALLOWED_HOSTS": "*"
+    },
+    "ports": [
+      {
+        "port": 8000,
+        "protocol": "HTTP"
+      }
+    ],
+    "run": {
+      "cmd": "gunicorn --worker-tmp-dir /dev/shm config.mysite.wsgi",
+      "type": "http",
+      "args": {
+        "name": "my-django-app",
+        "env": [],
+        "http": {
+          "port": 8000,
+          "health": {
+            "http": {
+              "path": "/",
+              "port": 8000
+            },
+            "type": "http",
+            "interval": "10s",
+            "timeout": "2s",
+            "check": {
+              "type": "http",
+              "path": "/",
+              "port": 8000
+            }
+          }
+        }
+      }
+    }
+}
+  
